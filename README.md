@@ -160,7 +160,7 @@ usrname@hostname:~/curr_path/TensorRT-Torch2TRT$ export LD_LIBRARY_PATH=$LD_LIBR
 ```bash
 usrname@hostname:~/curr_path/TensorRT-Torch2TRT$ unset LD_LIBRARY_PATH 
 ```
-C. Download pretrained weights for the PyTorch Hub.
+C. Download pretrained weights from the PyTorch Hub.
 - Example model: ResNet-18
 ```bash
 usrname@hostname:~/curr_path/TensorRT-Torch2TRT$ wget https://download.pytorch.org/models/resnet18-5c106cde.pth
