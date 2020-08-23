@@ -326,7 +326,7 @@ if __name__ == '__main__':
     for idx in range(args.num):
         # The error means maximum absolute difference.
         # When you want to check the Mean Absolute Difference (MAE), you can check the variable, avgmeter_error.list_avg[idx].
-        print('[{:d}/{:d}] Time: PyTorch: {:.3e}, TRT: {:.3e} / : Error: {:.3e}'.format(idx, args.num - 1, avgmeter_pytorch.list_time[idx], avgmeter_trt.list_time[idx], avgmeter_error.list_max[idx]))
+        print('[{:d}/{:d}] Time: PyTorch: {:.3e}, TRT: {:.3e} / Error: {:.3e}'.format(idx, args.num - 1, avgmeter_pytorch.list_time[idx], avgmeter_trt.list_time[idx], avgmeter_error.list_max[idx]))
 
 ```
 ```bash
@@ -339,22 +339,23 @@ ii)  Preparation:          0.019
 iii) Load model (PyTorch): 1.842
 iv)  Load model (TRT):     1.485
 v)   Computation:          0.047
-[0/9] Time: PyTorch: 4.094e-03, TRT: 4.008e-04 / : Error: 5.126e-06
-[1/9] Time: PyTorch: 2.885e-03, TRT: 2.041e-04 / : Error: 4.530e-06
-[2/9] Time: PyTorch: 2.232e-03, TRT: 1.900e-04 / : Error: 4.053e-06
-[3/9] Time: PyTorch: 2.207e-03, TRT: 1.533e-04 / : Error: 5.722e-06
-[4/9] Time: PyTorch: 2.524e-03, TRT: 1.898e-04 / : Error: 2.861e-06
-[5/9] Time: PyTorch: 2.263e-03, TRT: 1.552e-04 / : Error: 3.576e-06
-[6/9] Time: PyTorch: 2.284e-03, TRT: 1.404e-04 / : Error: 2.503e-06
-[7/9] Time: PyTorch: 2.286e-03, TRT: 1.485e-04 / : Error: 2.444e-06
-[8/9] Time: PyTorch: 2.265e-03, TRT: 1.454e-04 / : Error: 4.649e-06
-[9/9] Time: PyTorch: 2.283e-03, TRT: 1.481e-04 / : Error: 3.457e-06
+[0/9] Time: PyTorch: 4.094e-03, TRT: 4.008e-04 / Error: 5.126e-06
+[1/9] Time: PyTorch: 2.885e-03, TRT: 2.041e-04 / Error: 4.530e-06
+[2/9] Time: PyTorch: 2.232e-03, TRT: 1.900e-04 / Error: 4.053e-06
+[3/9] Time: PyTorch: 2.207e-03, TRT: 1.533e-04 / Error: 5.722e-06
+[4/9] Time: PyTorch: 2.524e-03, TRT: 1.898e-04 / Error: 2.861e-06
+[5/9] Time: PyTorch: 2.263e-03, TRT: 1.552e-04 / Error: 3.576e-06
+[6/9] Time: PyTorch: 2.284e-03, TRT: 1.404e-04 / Error: 2.503e-06
+[7/9] Time: PyTorch: 2.286e-03, TRT: 1.485e-04 / Error: 2.444e-06
+[8/9] Time: PyTorch: 2.265e-03, TRT: 1.454e-04 / Error: 4.649e-06
+[9/9] Time: PyTorch: 2.283e-03, TRT: 1.481e-04 / Error: 3.457e-06
 ```
 
 ## 6. Results <a name="results"></a>
-- Inference speed: The inference speed of the TensorRT using the Torch2TRT is much faster than that of the PyTorch without any other hardware-acceleration.
+- Inference speed [sec.]: The averaged inference speed of the TensorRT using the Torch2TRT is much faster than that of the PyTorch without any other hardware-acceleration.
     - PyTorch:  2.532e-03
     - TensorRT: 1.876e-04
 - Accuracy: There is no difference in accuracy between the PyTorch and TensorRT using Torch2TRT computations.
-    - Error is calculated between the PyTorch and the TensorRT using the Torch2TRT by the averaged maximum absolute difference.
     - Error: 3.892e-06
+    - Error is calculated between the PyTorch and the TensorRT using the Torch2TRT by the averaged maximum absolute difference.
+    
