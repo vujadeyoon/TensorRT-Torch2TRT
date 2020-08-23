@@ -111,4 +111,4 @@ if __name__ == '__main__':
     for idx in range(args.num):
         # The error means maximum absolute difference.
         # When you want to check the Mean Absolute Difference (MAE), you can check the variable, avgmeter_error.list_avg[idx].
-        print('[{:d}/{:d}] Time: PyTorch: {:.3e}, TRT: {:.3e} / : Error: {:.3e}'.format(idx, args.num - 1, avgmeter_pytorch.list_time[idx], avgmeter_trt.list_time[idx], avgmeter_error.list_max[idx]))
+        print('[{:d}/{:d}] Time: PyTorch: {:.3e}, TRT: {:.3e} / Error: {:.3e}'.format(idx, args.num - 1, avgmeter_pytorch.list_time[idx], avgmeter_trt.list_time[idx], avgmeter_error.list_max[idx]))
