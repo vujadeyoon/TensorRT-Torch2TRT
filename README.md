@@ -81,8 +81,8 @@ usrname@hostname:~/pip3_packages/TensorRT-7.0.0.11$ python3 --version
 ```
 - Installation
 ```bash
-usrname@hostname:~/pip3_packages/TensorRT-7.0.0.11$ pip3 install 'pycuda>=2019.1.1"
-usrname@hostname:~/pip3_packages/TensorRT-7.0.0.11$ pip3 install pytorch torchvision
+usrname@hostname:~/pip3_packages/TensorRT-7.0.0.11$ pip3 install "pycuda>=2019.1.1"
+usrname@hostname:~/pip3_packages/TensorRT-7.0.0.11$ pip3 install torch torchvision
 usrname@hostname:~/pip3_packages/TensorRT-7.0.0.11$ sudo pip3 install ./python/tensorrt-7.0.0.11-cp36-none-linux_x86_64.whl
 ```
 G. Install UFF packages.
