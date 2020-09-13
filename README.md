@@ -143,7 +143,7 @@ usrname@hostname:~/pip3_packages/torch2trt$ sudo python3 setup.py install
 ```
 - Option 2: With plugins
     - When you fail to install the Torch2TRT with plugins and the below error is observed, the plugins of the TensorRT may not be copied correctly.
-  Please refer to 3-F to copy the plugins of the TensorRT.
+  Please refer to the Section 3-F in order to copy the plugins of the TensorRT correctly.
     ```bash
     torch2trt/plugins/interpolate.cpp:6:10: fatal error: NvInfer.h: No such file or directory
      #include <NvInfer.h>
