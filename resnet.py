@@ -1,5 +1,6 @@
 import torch
 import torch.nn as nn
+import torch.nn.functional as F
 # from .utils import load_state_dict_from_url
 
 
@@ -217,6 +218,7 @@ class ResNet(nn.Module):
         return x
 
     def forward(self, x):
+        x = F.interpolate(x, scale_factor=2.0, mode='bilinear', align_corners=True)
         return self._forward_impl(x)
 
 
