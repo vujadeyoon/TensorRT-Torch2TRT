@@ -194,7 +194,7 @@ C. Download pretrained weights from the PyTorch Hub.
 usrname@hostname:~/curr_path/TensorRT-Torch2TRT$ wget https://download.pytorch.org/models/resnet18-5c106cde.pth
 ```
 D. Get the TensorRT model using the Torch2TRT from the PyTorch model for a customized ResNet-18.
-- To check the function of the Torch2TRT plugins, the interpolate function was added into the ResNet-18 model.
+- To check the function of the Torch2TRT plugins, the interpolation function was added into the ResNet-18 model.
 - Python script: resnet.py
 ```python
 import torch.nn.functional as F
